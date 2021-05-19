@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import classes from './Weather.module.css'
 import Forms from '../Form/Form'
 import Intro from '../../components/Intro/Intro'
@@ -46,11 +46,9 @@ const Weather = props => {
             const countryList = csc.getAllCountries()
             const countryName = countryInput.substring(5)
             const country = countryList.find(country => country.name === countryName)
-            console.log(country)
             let cities
             if (country) {
                 cities = csc.getCitiesOfCountry(country.isoCode)
-                console.log(cities)
             }
             const inputString = cityInput
             const pos = inputString.search(/ -/i)
@@ -79,11 +77,10 @@ const Weather = props => {
             setIsInvalidCountry(false)
             setIsInvalidCity(false)
 
-            axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=7815d493deac4208b8de50c9b5f26a3f`)
+            const apiKey = process.env.REACT_APP_API_KEY
+            axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely&appid=${apiKey}`)
                 .then(response => {
                     setWeatherInfo(response.data)
-                    console.log(response.data)
-                    const currentTemp = response.data.current.temp - 273.15
                     setShowTemp(true)
                     setError(false)
                     setLoading(false)
@@ -144,11 +141,11 @@ const Weather = props => {
     }
 
     // this method will execute once user click on country input field
-    const countryClickHandler = () => {
+    const countryClickHandler = useCallback(() => {
         if (countryInput.length !== 0) {
             setIsInvalidCountry(false)
         }
-    }
+    },[countryInput.length])
 
     // this method will clear the input data in the input tag once clicked on the close button
     const clearInputHandler = (input) => {
@@ -165,9 +162,9 @@ const Weather = props => {
     }
 
     // this method will execute if a country doesnt have cities then city input value will automatically update to the country name
-    const noCities = (country) => {
+    const noCities = useCallback((country) => {
         setCityInput(country.name)
-    }
+    }, [])
 
     return (
         <div className = {classes.Weather}>

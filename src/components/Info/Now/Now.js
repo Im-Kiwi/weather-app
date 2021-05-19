@@ -1,9 +1,7 @@
 import React from 'react'
 import classes from './Now.module.css'
 import { Image, Row, Col, Card, Badge } from 'react-bootstrap'
-import fewClouds from '../../../assets/few-clouds.svg'
 import { weatherIcons } from '../../../SVG/icons'
-import { useLocation } from 'react-router-dom'
 import { timeFormat } from '../../../commonMethods/timeFormat'
 
 // this component used to display the current weather

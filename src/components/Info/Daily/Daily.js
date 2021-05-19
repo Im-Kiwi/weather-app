@@ -1,6 +1,5 @@
 import React from 'react'
-import { Card, Row, Col, Badge, CardColumns, Image } from 'react-bootstrap'
-import { haze } from '../../../SVG/SvgImages'
+import { Card, Row, Col, Badge } from 'react-bootstrap'
 import classes from './Daily.module.css'
 import { weatherIcons } from '../../../SVG/icons'
 

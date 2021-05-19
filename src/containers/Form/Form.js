@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Form, Row, Col, Container, Button, Badge, InputGroup, Alert } from 'react-bootstrap'
+import { Form, Row, Col, Container, Button, InputGroup, Alert } from 'react-bootstrap'
 import classes from  './Form.module.css'
 import csc from 'country-state-city'
 import { toNonLatin } from '../../commonMethods/latinToNonLatin'
@@ -9,16 +9,16 @@ import Spinner from '../../components/UI/Spinner/Spinner'
 const Forms = props => {
     const [cities, setCities] = useState([])        // list of cities to be displayed once user clicks on city input
     const countryList = csc.getAllCountries()       // fetches all countries
+    const { countryInput, countryClickHandler, noCities } = props
 
     useEffect (() => {
-        const countryName = props.countryInput.substring(5) //fetching country name from the country input given by the user
+        const countryName = countryInput.substring(5) //fetching country name from the country input given by the user
         // finding the country from the country list
         const country = countryList.find(country => country.name === countryName) 
-
         let citiesIncludingStates
 
         //this method to make sure to remove the feedback message from the country form when user changes the value
-        props.countryClickHandler() 
+        countryClickHandler() 
 
         // if the country is found then fetch the cities 
         if (country) {
@@ -32,6 +32,7 @@ const Forms = props => {
                     const newCityName = toNonLatin(city)
                     city.name = newCityName
 
+                    // state here is the state of the country XD
                     const currentState = states.find(state => state.isoCode === city.stateCode)
                     return {
                         city : city,
@@ -40,13 +41,12 @@ const Forms = props => {
                 })
                 setCities(citiesIncludingStates)
             } else {
-                props.noCities(country) // if no cities found the country name will be the city name
+                noCities(country) // if no cities found the country name will be the city name
             }
         } else {
             setCities([])
         }
-        
-    }, [props.countryInput])
+    }, [countryInput, countryClickHandler, countryList, noCities])
 
     return (
             <Container>

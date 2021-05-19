@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 
 // this component will show the app title and its logo
 const Header = () => {
-    const styleRow = 'text-center justify-content-center mt-5'
     
     return (
         <Container className = {classes.root}>

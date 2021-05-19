@@ -1,5 +1,5 @@
-import React, { useState } from'react'
-import { Nav, Button } from 'react-bootstrap'
+import React from'react'
+import { Nav } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import { useLocation } from 'react-router-dom'
 import classes from './Nav.module.css'
