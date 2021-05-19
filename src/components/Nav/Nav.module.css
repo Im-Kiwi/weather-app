@@ -1,0 +1,14 @@
+.item {
+    background-color: #ffffff;
+    color: #007bff;
+    border: solid;
+    border-width: thin;
+    border-color: #007bff;
+}
+
+.item:hover {
+    color: black;
+    transform: scale(1.05, 1.05);
+    transition: 0,8s;
+}
+

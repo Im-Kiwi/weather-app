@@ -1,0 +1,47 @@
+.Weather {
+    margin-top: 35px;
+}
+
+.Info {
+    background-color: #457b9d;
+    margin-top: 57px;
+}
+
+.infoContainer {
+    border-radius: 10px;
+}
+
+.cardSupporter {
+    width: 700px;
+    height: 440px;
+    background: white;
+    margin-top: -417px !important;
+    margin: auto;
+    z-index: 10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+}
+
+/* ----------------------------------------RESPONSIVE CSS ----------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+    .cardSupporter {
+        width: 510px;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .cardSupporter {
+        width: 92vw;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .cardSupporter {
+        display: none;
+    }
+}
+

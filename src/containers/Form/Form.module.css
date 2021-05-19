@@ -1,0 +1,47 @@
+.root {
+    max-width: 1100px;
+}
+
+.form {
+    border-color: rgb(118, 180, 250);
+    border: none;
+    border-bottom: 3px solid;
+    border-radius: 0;
+    background-color: transparent !important;
+}
+
+.form::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.form:focus {
+    box-shadow: none !important; 
+    border-bottom: 3px solid;
+}
+
+.listItem {
+    border-top : 0;   
+}
+
+.option {
+    background-color: white;
+    color : black;
+}
+
+.checkButton:hover {
+    box-shadow: 0 4px 8px 0 grey !important;
+}
+
+.close {
+    color: black;
+}
+
+
+/* -------------------------------------------------- RESPONSIVE CSS ------------------------------------------------------------ */
+
+@media (max-width : 767px) {
+    
+    .formCol {
+        margin-bottom: 30px;
+    }
+}

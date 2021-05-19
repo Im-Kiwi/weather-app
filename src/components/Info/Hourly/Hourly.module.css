@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+.hourly {
+    position: relative;
+    width: 900px;
+
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 260px;
+    height: 252px;
+    border: 0;
+}
+
+.titleBadge {
+    background-color: #457b9d;
+    font-size: 1.1rem;
+}
+
+.temp {
+    font-size: 1.23rem;
+    font-family: 'Jura', sans-serif;
+}
+
+.image {
+    width: 100px;
+    height: 130px;
+    margin-bottom: -6px;
+}
+
+.textConfig {
+    text-align: left;
+    font-size: 0.8rem;
+    margin: auto;
+    font-size: 0.79rem;
+    font-family:'Reggae One', cursive;
+}
+
+/* --------------------------------------------- RESPONSIVE CSS ------------------------------------------------------- */
+
+@media (max-width: 767px) {
+    
+    .cards {
+        width: 70vw;
+    }
+
+    .textConfig {
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .textConfig {
+        text-align: left;
+    }
+
+    .cards {
+        width: 260px;
+    }
+}

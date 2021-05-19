@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+
+.nav {
+    margin: auto;
+    height: 90px;
+    padding: 10px;
+    max-width: 480px;
+    border: solid;
+    border-width: 2px;
+    border-radius: 70px;
+    border-color:#457b9d;
+    background: linear-gradient(90deg, #fdfffc 28%, #457b9d 20%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.insideNav {
+    width: 470px;
+    padding: 10px;
+}
+
+.header {
+    font-family: 'Chela One', cursive;
+    font-size: 2em;
+}
+
+.Logo {
+    height : 80px;
+}
+
+.hiddenTitle {
+    display: none;
+}
+
+
+/*------------------------------------------------------- RESPONSIVE CSS ---------------------------------------------------------*/
+
+@media (max-width: 575px) {
+   .Logo {
+       display: none;
+   }
+
+   .nav {
+       background: #457b9d;
+   }
+
+   .imageCol {
+       display: none;
+   }
+
+   .hiddenTitle {
+       display: block;
+       text-align: center;
+       text-decoration: none;
+       font-family: 'Chela One', cursive;
+       align-items: center;
+       font-size: 9vw;
+    }
+
+    .hiddenTitle:hover {
+        text-decoration: none;
+    }
+
+    .insideNav {
+        display: none;
+    }
+}
+
+
+
+

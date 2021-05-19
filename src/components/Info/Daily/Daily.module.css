@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+.root {
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image {
+    width : 100px;
+    height : 130px;
+    margin : auto;
+}
+
+.cards {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border: 0;
+    width : 260px;
+    height: 252px;
+    background: linear-gradient(to right, #fbf7f4 50% ,#99c1b9 50%);
+}
+
+.temp {
+    font-size: 1.23rem;
+    font-family: 'Jura', sans-serif;
+}
+
+.titleBadge {
+    background-color: #457b9d;
+    font-size: 1.1rem;
+}
+
+.textConfig {
+    text-align: left;
+    margin : auto;
+    font-size: 0.79rem;
+    font-family:'Reggae One', cursive;
+}
+
+/* --------------------------------------------------- RESPONSIVE CSS ---------------------------------------------------- */
+
+@media (max-width: 767px) {
+    
+    .cards {
+        width: 70vw;
+    }
+
+    .textConfig {
+        text-align: center;
+    }
+}
+
+@media (max-width: 372px) {
+    .cards {
+        width: 260px;
+    }
+
+    .textConfig {
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 349px) {
+    
+}
+    
