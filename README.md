@@ -15,7 +15,7 @@
 
 - If you decide to run this project in your local system then you can use the git clone command to clone it in your system or you can download the zip file of the code by clicking on the 'Code' green button
 - After that run ```npm install``` command to install all the dependencies which is require to run the project
-- After the run ```npm start``` to run app in your system.
+- After that run ```npm start``` to run app in your system.
 
 ## TOOLS USED TO MAKE THIS PROJECT
 
