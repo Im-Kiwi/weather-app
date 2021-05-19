@@ -27,12 +27,12 @@ const Intro = props => {
                 <Card className = {[classes.card, 'text-secondary'].join(' ')}>
                     <Card.Title className = {classes.cardTitle}>Current Weather Report</Card.Title>
                     <Card.Text>
-                        Includes current temperature, humidity, wind speed, sunrise & sunset time, weather description 
+                        Includes current temperature, humidity, visibility, wind speed, sunrise & sunset time, weather description 
                     </Card.Text>
                 </Card>
                 <Card className = {[classes.card, classes.middleCard, 'text-light'].join(' ')}>
                     <Card.Title>Hourly Weather Report</Card.Title>
-                    <Card.Text>Includes weather report of upcoming hours of a day. This contains the information of temperature, humidity, weather decription, windspeed</Card.Text>
+                    <Card.Text>Includes weather report of upcoming hours of a day. This contains the information of temperature, humidity, visiblitiy, weather decription, windspeed</Card.Text>
                 </Card>
                 <Card className = {[classes.card, 'text-secondary'].join(' ')}>
                     <Card.Title className = {classes.cardTitle}>Daily Weather Report</Card.Title>
